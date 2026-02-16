@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, ChevronRight, User, AppWindow } from "lucide-react";
-import { getProducts, getAccounts } from "@/lib/api";
+import { getSearchData } from "@/app/actions";
 import { Product, Account } from "@/types";
 
 interface SearchModalProps {
@@ -23,12 +23,12 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     useEffect(() => {
         if (isOpen && products.length === 0) {
             setLoading(true);
-            Promise.all([getProducts(), getAccounts()])
-                .then(([p, a]) => {
-                    setProducts(p);
-                    setAccounts(a);
+            getSearchData()
+                .then(({ products, accounts }) => {
+                    setProducts(products);
+                    setAccounts(accounts);
                 })
-                .catch((err) => console.error("Search data fetch failed", err))
+                .catch((err: any) => console.error("Search data fetch failed", err))
                 .finally(() => setLoading(false));
         }
     }, [isOpen]);
