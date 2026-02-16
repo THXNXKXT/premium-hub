@@ -2,6 +2,7 @@
 
 import CopyButton from "./CopyButton";
 import { Account } from "@/types";
+import Link from "next/link";
 
 interface AccountCardProps {
     account: Account;
@@ -32,7 +33,11 @@ export default function AccountCard({ account, platformName, platformColor, plat
     const isExpiringSoon = daysLeft > 0 && daysLeft <= 7;
 
     return (
-        <div className="bg-card rounded-xl p-3 active:scale-[0.97] transition-transform duration-150" style={{ boxShadow: 'var(--shadow-card)' }}>
+        <Link
+            href={`/accounts/${account._id}`}
+            className="block bg-card rounded-xl p-3 active:scale-[0.97] transition-transform duration-150 hover:ring-2 hover:ring-accent/50 focus:outline-none focus:ring-2 focus:ring-accent"
+            style={{ boxShadow: 'var(--shadow-card)' }}
+        >
             {/* Header: Platform + Status */}
             <div className="flex items-center justify-between mb-2.5">
                 <div className="flex items-center gap-2.5">
@@ -134,6 +139,6 @@ export default function AccountCard({ account, platformName, platformColor, plat
                     ฿{account.amount?.toLocaleString() || "0"}
                 </span>
             </div>
-        </div>
+        </Link>
     );
 }

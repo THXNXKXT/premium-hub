@@ -10,7 +10,9 @@ interface CopyButtonProps {
 export default function CopyButton({ text, label = "คัดลอก" }: CopyButtonProps) {
     const [copied, setCopied] = useState(false);
 
-    const handleCopy = async () => {
+    const handleCopy = async (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
         try {
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 await navigator.clipboard.writeText(text);
