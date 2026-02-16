@@ -15,6 +15,10 @@ const prompt = Prompt({
 export const metadata: Metadata = {
   title: "Premium Hub",
   description: "จัดการข้อมูล Premium Accounts",
+  icons: {
+    icon: "/img/logo.png",
+    apple: "/img/logo.png",
+  },
 };
 
 export default function RootLayout({

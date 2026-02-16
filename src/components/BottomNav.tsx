@@ -21,12 +21,12 @@ const navItems = [
         href: "#", // Static, non-clickable
         label: "Premium Hub",
         icon: (
-            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-accent to-accent-light flex items-center justify-center shadow-xl transform border-4 border-background ring-2 ring-accent/20">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M6 3h12l4 6-10 13L2 9z" />
-                    <path d="M11 3 8 9l4 13 4-13-3-6" />
-                    <path d="M2 9h20" />
-                </svg>
+            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-accent to-accent-light flex items-center justify-center shadow-xl transform border-4 border-background ring-2 ring-accent/20 overflow-hidden">
+                <img
+                    src="/img/logo.png"
+                    alt="Logo"
+                    className="w-full h-full object-cover"
+                />
             </div>
         ),
         position: "center"

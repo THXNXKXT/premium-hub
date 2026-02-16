@@ -35,12 +35,12 @@ export default function Sidebar() {
         <aside className="hidden md:flex flex-col w-16 h-screen fixed left-0 top-0 bg-card border-r border-border">
             {/* Logo - Minimal */}
             <div className="flex items-center justify-center h-16 border-b border-border">
-                <div className="w-10 h-10 rounded-xl bg-foreground text-background flex items-center justify-center shadow-md">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M6 3h12l4 6-10 13L2 9z" />
-                        <path d="M11 3 8 9l4 13 4-13-3-6" />
-                        <path d="M2 9h20" />
-                    </svg>
+                <div className="w-10 h-10 rounded-xl bg-foreground text-background flex items-center justify-center shadow-md overflow-hidden">
+                    <img
+                        src="/img/logo.png"
+                        alt="Logo"
+                        className="w-full h-full object-cover"
+                    />
                 </div>
             </div>
 
