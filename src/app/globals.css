@@ -1,26 +1,307 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors - Modern Premium (Slate & Blue) */
+  --background: #f8fafc;
+  /* Slate-50 */
+  --foreground: #0f172a;
+  /* Slate-900 */
+
+  --muted: #f1f5f9;
+  /* Slate-100 */
+  --muted-foreground: #64748b;
+  /* Slate-500 */
+
+  --border: #e2e8f0;
+  /* Slate-200 */
+  --border-hover: #cbd5e1;
+  /* Slate-300 */
+
+  --accent: #2563eb;
+  /* Blue-600 */
+  --accent-light: #eff6ff;
+  /* Blue-50 */
+  --accent-foreground: #ffffff;
+
+  --success: #10b981;
+  /* Emerald-500 */
+  --warning: #f59e0b;
+  /* Amber-500 */
+  --danger: #ef4444;
+  /* Red-500 */
+
+  --card-bg: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+
+  /* Shadows - Soft & Diffused */
+  --shadow-xs: 0 1px 2px 0 rgb(15 23 42 / 0.05);
+  --shadow-sm: 0 4px 6px -1px rgb(15 23 42 / 0.02), 0 2px 4px -2px rgb(15 23 42 / 0.02);
+  --shadow-md: 0 10px 15px -3px rgb(15 23 42 / 0.03), 0 4px 6px -4px rgb(15 23 42 / 0.03);
+  --shadow-lg: 0 20px 25px -5px rgb(15 23 42 / 0.04), 0 8px 10px -6px rgb(15 23 42 / 0.04);
+  --shadow-xl: 0 25px 50px -12px rgb(15 23 42 / 0.08);
+
+  --shadow-card:
+    0 0 0 1px rgb(15 23 42 / 0.03),
+    0 2px 8px -2px rgb(15 23 42 / 0.04),
+    0 8px 16px -4px rgb(15 23 42 / 0.02);
+
+  --shadow-card-hover:
+    0 0 0 1px rgb(15 23 42 / 0.04),
+    0 12px 24px -8px rgb(15 23 42 / 0.08),
+    0 4px 8px -4px rgb(15 23 42 / 0.04);
+
+  /* Spacing - Relaxed but Organized */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Border Radius - Friendly & Soft */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  --radius-card: 1.25rem;
+  /* 20px */
+
+  /* Typography - Clean & Modern */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 0.9375rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+}
+
+/* Dark Mode Overlay */
+.dark {
+  --background: #020617;
+  /* Slate-950 */
+  --foreground: #f8fafc;
+  /* Slate-50 */
+
+  --muted: #0f172a;
+  /* Slate-900 */
+  --muted-foreground: #94a3b8;
+  /* Slate-400 */
+
+  --border: #1e293b;
+  /* Slate-800 */
+  --border-hover: #334155;
+  /* Slate-700 */
+
+  --accent: #3b82f6;
+  /* Blue-500 */
+  --accent-light: #1e3a8a;
+  /* Blue-900 */
+  --accent-foreground: #ffffff;
+
+  --card-bg: #0f172a;
+  /* Slate-900 */
+  --glass-bg: rgba(15, 23, 42, 0.85);
+  /* Slightly more opaque for dark mode */
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.5);
+  --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5);
+  --shadow-card: 0 0 0 1px rgb(255 255 255 / 0.05), 0 4px 6px -1px rgb(0 0 0 / 0.3);
+  --shadow-card-hover: 0 0 0 1px rgb(255 255 255 / 0.1), 0 10px 15px -3px rgb(0 0 0 / 0.4);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-prompt), system-ui, -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 15px;
+  /* Base size for rems */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
   }
 }
 
 body {
-  background: var(--background);
+  font-family: var(--font-prompt), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Production-Grade Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Card Effects - Mobile Optimized */
+.card-hover {
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (hover: hover) {
+  .card-hover:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* Button Effects - Touch Optimized */
+.btn-hover {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-hover:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) {
+  .btn-hover:hover {
+    opacity: 0.9;
+  }
+}
+
+/* Scrollbar - Minimal & Clean */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Safe Area for Mobile */
+.pb-safe {
+  padding-bottom: calc(8.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .pb-safe {
+    padding-bottom: 0;
+  }
+}
+
+/* Focus Styles - Accessible */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Hide Scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Loading Skeleton */
+.skeleton {
+  background: linear-gradient(90deg,
+      var(--muted) 0%,
+      var(--background) 50%,
+      var(--muted) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+/* Smooth Transitions */
+.transition-smooth {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
