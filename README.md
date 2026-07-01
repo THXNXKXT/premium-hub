@@ -109,4 +109,4 @@ npm run start
 
 ## 📝 License
 
-สงวนลิขสิทธิ์ © 2025 [THXNXKXT](https://github.com/THXNXKXT) — โปรเจกต์ส่วนตัว ไม่อนุญาตให้ใช้ คัดลอก หรือแจกจ่ายโดยไม่ได้รับอนุญาต
+© THXNXKXT. All rights reserved.
