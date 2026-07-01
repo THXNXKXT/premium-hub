@@ -1,29 +1,47 @@
+<div align="center">
+
+<img src="public/img/logo.png" alt="Premium Hub" width="80" height="80" />
+
 # Premium Hub
 
-เว็บแดชบอร์ดจัดการบัญชี Premium (สมัครสมาชิกแอป / สตรีมมิ่ง) ที่รวบรวมข้อมูลแพ็กเกจราคา จำนวนจอ และบัญชีประจำสัปดาห์ไว้ในที่เดียว ผู้ใช้คัดลอกข้อมูลเข้าสู่ระบบได้ทันทีจากหน้าเว็บ
+เว็บแดชบอร์ดจัดการบัญชี Premium (สมัครสมาชิกแอป / สตรีมมิ่ง)
 
-🌐 **เว็บไซต์:** [https://www.app-premium-hub.online/](https://www.app-premium-hub.online/)
+รวบรวมข้อมูลแพ็กเกจราคา จำนวนจอ และบัญชีประจำสัปดาห์ไว้ในที่เดียว — คัดลอกข้อมูลเข้าสู่ระบบได้ทันทีจากหน้าเว็บ
+
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js&logoColor=white)](https://nextjs.org)
+[![React](https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![License](https://img.shields.io/badge/License-Private-red)]()
+
+**เว็บไซต์** · [app-premium-hub.online](https://www.app-premium-hub.online/)
+
+</div>
+
+---
 
 ## ✨ ฟีเจอร์
 
-- **หน้าแรก** — แสดงแอปทั้งหมดเป็นการ์ด พร้อมจำนวนบัญชีและราคาเริ่มต้น แยกส่วน "เปิดให้บริการ" กับ "ปิดการใช้งาน" อย่างชัดเจน
-- **หน้ารายละเอียดแอป** (`/products/[id]`) — แสดงแพ็กเกจราคา (ราคาขาย / ทุน / ราคาตัวแทน / กำไร) พร้อมบัญชีประจำสัปดาห์แยก "ใช้งานได้" และ "หมดอายุ" พร้อมนับวันที่เหลือ
-- **หน้าบัญชีทั้งหมด** (`/accounts`) — ค้นหาและเรียกดูบัญชีทุกแพลตฟอร์ม
-- **คัดลอกข้อมูล** — ปุ่มคัดลอกอีเมล / รหัสผ่าน / ลิงก์ คลิกเดียว
-- **รองรับ Dark / Light Mode** — สลับธีมตามระบบหรือเลือกเอง
-- **Responsive** — มือถือใช้ Bottom Navigation, เดสก์ท็อปใช้ Sidebar
+| | ฟีเจอร์ | รายละเอียด |
+|---|---------|-----------|
+| 🏠 | **หน้าแรก** | แสดงแอปทั้งหมดเป็นการ์ด พร้อมจำนวนบัญชีและราคาเริ่มต้น แยก "เปิดให้บริการ" กับ "ปิดการใช้งาน" |
+| 📦 | **รายละเอียดแอป** | แพ็กเกจราคา (ขาย / ทุน / ตัวแทน / กำไร) พร้อมบัญชีประจำสัปดาห์แยก "ใช้งานได้" และ "หมดอายุ" พร้อมนับวัน |
+| 📋 | **บัญชีทั้งหมด** | ค้นหาและเรียกดูบัญชีทุกแพลตฟอร์มในหน้าเดียว |
+| 📋 | **คัดลอกข้อมูล** | ปุ่มคัดลอกอีเมล / รหัสผ่าน / ลิงก์ คลิกเดียว |
+| 🌓 | **Dark / Light Mode** | สลับธีมตามระบบหรือเลือกเอง |
+| 📱 | **Responsive** | มือถือใช้ Bottom Navigation · เดสก์ท็อปใช้ Sidebar |
 
 ## 🛠 เทคโนโลยี
 
 | หมวด | เครื่องมือ |
 |------|-----------|
-| Framework | [Next.js 16](https://nextjs.org) (App Router) + React 19 |
-| ภาษา | TypeScript |
-| Styling | Tailwind CSS v4 |
-| Animation | Framer Motion |
-| Icons | lucide-react |
-| Theme | next-themes |
-| Font | Prompt (รองรับไทย) |
+| **Framework** | [Next.js 16](https://nextjs.org) · App Router · React 19 |
+| **ภาษา** | TypeScript |
+| **Styling** | Tailwind CSS v4 |
+| **Animation** | Framer Motion |
+| **Icons** | lucide-react |
+| **Theme** | next-themes |
+| **Font** | Prompt (รองรับไทย) |
 
 ## 📁 โครงสร้างโปรเจกต์
 
@@ -38,7 +56,7 @@ src/
 │   ├── products/[id]/page.tsx   # รายละเอียดแอป + แพ็กเกจ + บัญชี
 │   ├── accounts/page.tsx        # รายการบัญชีทั้งหมด
 │   └── accounts/[id]/page.tsx   # รายละเอียดบัญชีรายตัว
-├── components/                  # UI components (ProductCard, AccountCard, CopyButton, ...)
+├── components/                  # UI components (ProductCard, AccountCard, ...)
 ├── lib/api.ts                   # ดึงข้อมูลจาก REST API
 └── types/index.ts               # TypeScript interfaces (Product, Account)
 ```
@@ -47,7 +65,7 @@ src/
 
 ### สิ่งที่ต้องมี
 
-ติดตั้ง Node.js 18+ (แนะนำ 20+) และตัวจัดการแพ็กเกจอย่างใดอย่างหนึ่ง: `npm`, `bun`, `pnpm` หรือ `yarn`
+ติดตั้ง Node.js 18+ (แนะนำ 20+) และตัวจัดการแพ็กเกจ `npm` / `bun` / `pnpm` / `yarn`
 
 ### ติดตั้ง
 
@@ -91,8 +109,8 @@ npm run start
 
 ## 🌍 Deployment
 
-เว็บไซต์ทำงานจริงที่ [https://www.app-premium-hub.vercel.app/]
+เว็บไซต์ทำงานจริงที่ **[app-premium-hub.online](https://www.app-premium-hub.online/)** — อ้างอิง [เอกสาร Deploy Next.js](https://nextjs.org/docs/app/building-your-application/deploying) สำหรับการ deploy บนแพลตฟอร์มอื่น
 
 ## 📝 License
 
-THXNXKXT
+โปรเจกต์ส่วนตัว — ไม่เปิดให้ใช้งานภายใต้ License สาธารณะ
