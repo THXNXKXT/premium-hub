@@ -12,7 +12,7 @@
 [![React](https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-[![License](https://img.shields.io/badge/License-Private-red)]()
+[![License](https://img.shields.io/badge/©-2025_THXNXKXT-red)](https://github.com/THXNXKXT)
 
 **เว็บไซต์** · [app-premium-hub.online](https://www.app-premium-hub.online/)
 
@@ -107,10 +107,6 @@ npm run build
 npm run start
 ```
 
-## 🌍 Deployment
-
-เว็บไซต์ทำงานจริงที่ **[app-premium-hub.online](https://www.app-premium-hub.online/)** — อ้างอิง [เอกสาร Deploy Next.js](https://nextjs.org/docs/app/building-your-application/deploying) สำหรับการ deploy บนแพลตฟอร์มอื่น
-
 ## 📝 License
 
-โปรเจกต์ส่วนตัว — ไม่เปิดให้ใช้งานภายใต้ License สาธารณะ
+สงวนลิขสิทธิ์ © 2025 [THXNXKXT](https://github.com/THXNXKXT) — โปรเจกต์ส่วนตัว ไม่อนุญาตให้ใช้ คัดลอก หรือแจกจ่ายโดยไม่ได้รับอนุญาต
